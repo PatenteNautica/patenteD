@@ -49,15 +49,15 @@ if st.session_state.started:
     tempo_rimasto = DURATA_ESAME - (time.time() - st.session_state.start_time)
     if tempo_rimasto > 0 and st.session_state.current_question < len(st.session_state.questions):
         minuti, secondi = divmod(int(tempo_rimasto), 60)
-        st.sidebar.write(f"⏳ Tempo rimanente: {minuti:02d}:{secondi:02d}")
-        #st.sidebar.markdown(
-            #f"""
-            #<div style='text-align: center; font-size: 24px; font-weight: bold; color: #e53935;'>
-        #⏳ Tempo rimanente:<br>{minuti:02d}:{secondi:02d}
-           # </div>
-           # """, 
-           # unsafe_allow_html=True
-       # )
+        #st.sidebar.write(f"⏳ Tempo rimanente - si aggiorna all'arrivo di una nuova domanda: {minuti:02d}:{secondi:02d}")
+         st.sidebar.markdown(
+             f"""
+             <div style='text-align: center; font-size: 24px; font-weight: bold; color: #e53935;'>
+         ⏳ Tempo rimanente - si aggiorna all'arrivo di una nuova domanda:<br>{minuti:02d}:{secondi:02d}
+             </div>
+             """, 
+             unsafe_allow_html=True
+         )
 
         # ✅ Barra di progresso
         progress = st.session_state.current_question / len(st.session_state.questions)
