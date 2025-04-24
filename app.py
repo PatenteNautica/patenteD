@@ -54,11 +54,12 @@ if st.session_state.started:
         progress = st.session_state.current_question / len(st.session_state.questions)
         st.progress(progress)
         q = st.session_state.questions[st.session_state.current_question]
+        
         st.subheader(f"{q['tema']}: {q['domanda']}")
 
-        # Mostra l'immagine DOPO la domanda (se presente)
+# Mostra immagine sotto la domanda
         if q['immagine']:
-        st.image(q['immagine'], caption="Figura di riferimento", use_column_width=True)
+           st.image(q['immagine'], caption="Figura di riferimento", use_column_width=True)
 
         #if q['immagine']:
             #st.image(q['immagine'])
