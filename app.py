@@ -15,7 +15,7 @@ test_structure = {
     "COLREG": 2,
     "METEOROLOGIA": 1,
     "NAVIGAZIONE": 1,
-    "NORMATIVA DIPORTISTICA E AMBIENTALE": 3
+    "NORMATIVA DIPORTISTICA E AMBIENTALE": 2
 }
 
 st.title("Simulatore Esame Nautica")
