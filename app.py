@@ -59,7 +59,7 @@ if st.session_state.started:
 
 # Mostra immagine sotto la domanda
         if q['immagine']:
-           st.image(q['immagine'], caption="Figura di riferimento", use_column_width=True)
+           st.image(q['immagine'], caption="Figura di riferimento", use_container_width=True)
 
         #if q['immagine']:
             #st.image(q['immagine'])
