@@ -53,7 +53,7 @@ if st.session_state.started:
          st.sidebar.markdown(
              f"""
              <div style='text-align: center; font-size: 24px; font-weight: bold; color: #e53935;'>
-         ⏳ Tempo rimanente - si aggiorna all'arrivo di una nuova domanda:<br>{minuti:02d}:{secondi:02d}
+             ⏳ Tempo rimanente - si aggiorna all'arrivo di una nuova domanda:<br>{minuti:02d}:{secondi:02d}
              </div>
              """, 
              unsafe_allow_html=True
