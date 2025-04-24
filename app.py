@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import streamlit.components.v1 as components
 
 # Carica il dataset
 df = pd.read_csv('Updated_Questions_Dataset.csv')
@@ -118,5 +119,21 @@ if st.session_state.started:
         if st.button('Ricomincia Esame'):
             st.session_state.clear()
             st.rerun()
+
+import streamlit.components.v1 as components
+
+adsense_script = """
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4888564865949712"
      crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4888564865949712"
+     data-ad-slot="XXXXXXXXXX"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+"""
+
+components.html(adsense_script, height=100)
