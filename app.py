@@ -30,7 +30,7 @@ st.markdown(
         <a href="https://www.patentenautica.org" target="_blank" style="text-decoration: none;">
             <img src="https://patentenautica.org/wp-content/uploads/2025/04/ChatGPT-Image-24-apr-2025-10_20_53-1-300x300.png" 
                  alt="Patente Nautica" width="70" style="vertical-align: middle;">
-            <span style="font-size: 24px; color: blue; vertical-align: middle; margin-left: 10px;">PatenteNautica.org</span>
+            <span style="font-size: 24px; color: #002e60; vertical-align: middle; margin-left: 10px;">PatenteNautica.org</span>
         </a>
         <br>
         Simulatore Esame - Patente D
