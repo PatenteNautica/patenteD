@@ -19,7 +19,7 @@ test_structure = {
     "NORMATIVA DIPORTISTICA E AMBIENTALE": 3
 }
 
-st.title("Simulatore Esame Nautica - Patente D")
+st.title("Simulatore Esame - Patente D")
 
 DURATA_ESAME = 30 * 60  # 30 minuti
 
