@@ -19,7 +19,7 @@ test_structure = {
     "NORMATIVA DIPORTISTICA E AMBIENTALE": 3
 }
 
-st.title("Simulatore Esame Nautica")
+st.title("Simulatore Esame Nautica - Patente D")
 
 DURATA_ESAME = 30 * 60  # 30 minuti
 
@@ -60,7 +60,7 @@ if st.session_state.started:
         risposta = st.radio("Seleziona la risposta:", ['1', '2', '3'],
                             format_func=lambda x: q['risposte'][int(x)-1], key=f"risposta_{st.session_state.current_question}")
 
-        if st.button("Conferma risposta", key=f"conferma_{st.session_state.current_question}"):
+        if st.button("Conferma risposta / Avanti", key=f"conferma_{st.session_state.current_question}"):
             if risposta == q['corretta']:
                 st.success("Corretto!")
                 st.session_state.correct_answers += 1
