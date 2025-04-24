@@ -74,19 +74,6 @@ if st.session_state.started:
                 })
             st.session_state.current_question += 1
 
-    #elif tempo_rimasto <= 0 or st.session_state.current_question >= len(st.session_state.questions):
-        # 🎯 Valutazione finale con emoji
-punteggio = st.session_state.correct_answers
-totale = len(st.session_state.questions)
-st.subheader(f"Hai risposto correttamente a {punteggio} domande su {totale}.")
-
-# Emoji e messaggio finale
-if punteggio >= 13:
-    st.success("🎉 Complimenti, ottimo risultato!")
-elif punteggio >= 10:
-    st.info("💪 Buon lavoro, ma puoi migliorare ancora.")
-else:
-    st.warning("📘 Allenati ancora un po', riprova!")
     elif tempo_rimasto <= 0 or st.session_state.current_question >= len(st.session_state.questions):
         st.warning("⏰ Esame terminato!")
         st.subheader(f"Hai risposto correttamente a {st.session_state.correct_answers} domande su {len(st.session_state.questions)}.")
