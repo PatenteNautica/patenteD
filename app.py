@@ -82,5 +82,5 @@ if st.session_state.started:
                 st.write("**Domanda:**", err['domanda'])
                 st.write("**Risposta corretta:**", err['risposta_corretta'])
         if st.button('Ricomincia Esame'):
-            for key in list(st.session_state.keys()):
-                del st.session_state[key]
+            st.session_state.clear()
+            st.rerun()
