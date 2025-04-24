@@ -50,9 +50,9 @@ if st.session_state.started:
     if tempo_rimasto > 0 and st.session_state.current_question < len(st.session_state.questions):
         minuti, secondi = divmod(int(tempo_rimasto), 60)
         st.sidebar.write(f"⏳ Tempo rimanente: {minuti:02d}:{secondi:02d}")
-# ✅ Barra di progresso
-progress = st.session_state.current_question / len(st.session_state.questions)
-st.progress(progress)
+        # ✅ Barra di progresso
+        progress = st.session_state.current_question / len(st.session_state.questions)
+        st.progress(progress)
         q = st.session_state.questions[st.session_state.current_question]
 
         if q['immagine']:
