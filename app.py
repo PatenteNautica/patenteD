@@ -118,3 +118,5 @@ if st.session_state.started:
         if st.button('Ricomincia Esame'):
             st.session_state.clear()
             st.rerun()
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4888564865949712"
+     crossorigin="anonymous"></script>
