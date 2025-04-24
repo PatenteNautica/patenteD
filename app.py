@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -35,7 +36,8 @@ if 'started' not in st.session_state:
                     'domanda': riga['DOMANDA'],
                     'risposte': [riga['RISPOSTA 1'], riga['RISPOSTA 2'], riga['RISPOSTA 3']],
                     'corretta': '1' if riga['V/F'] == 'V' else '2' if riga['V/F.1'] == 'V' else '3',
-                    'immagine': riga['IMMAGINE'] if pd.notna(riga['IMMAGINE']) else None
+                    'immagine': riga['IMMAGINE'] if pd.notna(riga['IMMAGINE']) else None,
+                    'risposta_data': None
                 })
         st.session_state.current_question = 0
         st.session_state.correct_answers = 0
@@ -48,29 +50,35 @@ if 'started' in st.session_state:
 
         q = st.session_state.questions[st.session_state.current_question]
 
-        # Visualizza immagine se presente
+        # Mostra immagine se presente
         if q['immagine']:
             st.image(q['immagine'])
 
         st.subheader(f"{q['tema']}: {q['domanda']}")
 
-        risposta = st.radio("Seleziona la risposta:", ['1', '2', '3'], format_func=lambda x: q['risposte'][int(x)-1])
+        risposta = st.radio("Seleziona la risposta:", ['1', '2', '3'], index=0,
+                            format_func=lambda x: q['risposte'][int(x)-1], key=f"risposta_{st.session_state.current_question}")
 
         if st.button('Conferma risposta'):
+            q['risposta_data'] = risposta
             if risposta == q['corretta']:
                 st.success("Corretto!")
                 st.session_state.correct_answers += 1
             else:
                 st.error(f"Errato! La risposta corretta era la {q['corretta']}.")
 
+        if q['risposta_data']:
             if st.session_state.current_question + 1 < len(st.session_state.questions):
-                st.session_state.current_question += 1
+                if st.button("Avanti"):
+                    st.session_state.current_question += 1
             else:
-                st.subheader(f"Esame terminato! Hai risposto correttamente a {st.session_state.correct_answers} domande su {len(st.session_state.questions)}.")
+                st.success(f"Esame terminato! Risposte corrette: {st.session_state.correct_answers} su {len(st.session_state.questions)}.")
                 if st.button('Ricomincia Esame'):
-                    del st.session_state['started']
+                    for key in list(st.session_state.keys()):
+                        del st.session_state[key]
     else:
-        st.warning("Tempo scaduto!")
+        st.warning("⏰ Tempo scaduto!")
         st.subheader(f"Risposte corrette: {st.session_state.correct_answers} su {len(st.session_state.questions)}")
         if st.button('Ricomincia Esame'):
-            del st.session_state['started']
+            for key in list(st.session_state.keys()):
+                del st.session_state[key]
