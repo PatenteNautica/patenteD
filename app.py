@@ -44,8 +44,8 @@ if not st.session_state.started:
                     'corretta': '1' if riga['V/F'] == 'V' else '2' if riga['V/F.1'] == 'V' else '3',
                     'immagine': riga['IMMAGINE'] if pd.notna(riga['IMMAGINE']) else None
                 })
-        st.experimental_set_query_params(started="1")
-        st.stop()  # ferma l'esecuzione qui per evitare che venga mostrato il pulsante
+        st.query_params["started"] = "1"
+        st.stop()
 if st.session_state.started:
     tempo_rimasto = DURATA_ESAME - (time.time() - st.session_state.start_time)
     if tempo_rimasto > 0 and st.session_state.current_question < len(st.session_state.questions):
