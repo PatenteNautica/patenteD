@@ -53,8 +53,10 @@ if st.session_state.started:
         minuti, secondi = divmod(int(tempo_rimasto), 60)
         st.sidebar.markdown(
             f"""
-            <div style='text-align: center; font-size: 24px; font-weight: bold; color: #e53935;'>
-                ⏳ Tempo rimanente - si aggiorna all'arrivo di una nuova domanda:<br>{minuti:02d}:{secondi:02d}
+            <div style='text-align: center; color: #e53935;'>
+            <span style='font-size: 18px;'>⏳ Tempo rimanente</span><br>
+            <span style='font-size: 12px;'>si aggiorna all'arrivo di una nuova domanda</span><br>
+            <span style='font-size: 32px; font-weight: bold;'>{minuti:02d}:{secondi:02d}</span>
             </div>
             """, 
             unsafe_allow_html=True
