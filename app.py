@@ -74,10 +74,10 @@ if 'started' in st.session_state:
         st.warning("⏰ Esame terminato!")
         st.subheader(f"Hai risposto correttamente a {st.session_state.correct_answers} domande su {len(st.session_state.questions)}.")
         if st.session_state.incorrect:
-            st.markdown("### Domande sbagliate:")
+            st.write("### Domande sbagliate:")
             for err in st.session_state.incorrect:
-                st.markdown(f"**Domanda:** {err['domanda']}  
-**Risposta corretta:** {err['risposta_corretta']}")
+                st.write("**Domanda:**", err['domanda'])
+                st.write("**Risposta corretta:**", err['risposta_corretta'])
         if st.button('Ricomincia Esame'):
             for key in list(st.session_state.keys()):
                 del st.session_state[key]
