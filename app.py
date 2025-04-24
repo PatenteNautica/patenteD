@@ -23,13 +23,14 @@ test_structure = {
 
 import streamlit as st
 
-# Titolo con immagine cliccabile
+# Titolo con immagine cliccabile e testo accanto
 st.markdown(
     """
     <h1 style='text-align: center;'>
-        <a href="https://www.patentenautica.org" target="_blank">
+        <a href="https://www.patentenautica.org" target="_blank" style="text-decoration: none;">
             <img src="https://patentenautica.org/wp-content/uploads/2025/04/ChatGPT-Image-24-apr-2025-10_20_53-1-300x300.png" 
-                alt="Patente Nautica" width="70">
+                 alt="Patente Nautica" width="70" style="vertical-align: middle;">
+            <span style="font-size: 24px; color: #000; vertical-align: middle; margin-left: 10px;">patentenautica.org</span>
         </a>
         <br>
         Simulatore Esame - Patente D
@@ -37,6 +38,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 DURATA_ESAME = 30 * 60  # 30 minuti
