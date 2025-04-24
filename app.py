@@ -24,6 +24,9 @@ st.title("Simulatore Esame Nautica")
 DURATA_ESAME = 30 * 60  # 30 minuti
 
 if 'started' not in st.session_state:
+    st.session_state.started = False
+
+if not st.session_state.started:
     if st.button('Inizia Esame'):
         st.session_state.started = True
         st.session_state.start_time = time.time()
@@ -42,7 +45,7 @@ if 'started' not in st.session_state:
                     'immagine': riga['IMMAGINE'] if pd.notna(riga['IMMAGINE']) else None
                 })
 
-if 'started' in st.session_state:
+if st.session_state.started:
     tempo_rimasto = DURATA_ESAME - (time.time() - st.session_state.start_time)
     if tempo_rimasto > 0 and st.session_state.current_question < len(st.session_state.questions):
         minuti, secondi = divmod(int(tempo_rimasto), 60)
@@ -57,7 +60,7 @@ if 'started' in st.session_state:
         risposta = st.radio("Seleziona la risposta:", ['1', '2', '3'],
                             format_func=lambda x: q['risposte'][int(x)-1], key=f"risposta_{st.session_state.current_question}")
 
-        if st.button("Conferma risposta"):
+        if st.button("Conferma risposta", key=f"conferma_{st.session_state.current_question}"):
             if risposta == q['corretta']:
                 st.success("Corretto!")
                 st.session_state.correct_answers += 1
@@ -68,7 +71,6 @@ if 'started' in st.session_state:
                     'risposta_corretta': q['risposte'][int(q['corretta'])-1]
                 })
             st.session_state.current_question += 1
-            st.experimental_rerun()
 
     elif tempo_rimasto <= 0 or st.session_state.current_question >= len(st.session_state.questions):
         st.warning("⏰ Esame terminato!")
