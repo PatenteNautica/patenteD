@@ -27,7 +27,7 @@ if 'started' not in st.session_state:
     st.session_state.started = False
 
 if not st.session_state.started:
-    if st.button('Inizia Esame'):
+    if st.button('Clicca due volte e Inizia Esame!'):
         st.session_state.started = True
         st.session_state.start_time = time.time()
         st.session_state.questions = []
