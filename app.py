@@ -54,11 +54,16 @@ if st.session_state.started:
         progress = st.session_state.current_question / len(st.session_state.questions)
         st.progress(progress)
         q = st.session_state.questions[st.session_state.current_question]
-
-        if q['immagine']:
-            st.image(q['immagine'])
-
         st.subheader(f"{q['tema']}: {q['domanda']}")
+
+        # Mostra l'immagine DOPO la domanda (se presente)
+        if q['immagine']:
+        st.image(q['immagine'], caption="Figura di riferimento", use_column_width=True)
+
+        #if q['immagine']:
+            #st.image(q['immagine'])
+
+        #st.subheader(f"{q['tema']}: {q['domanda']}")
         risposta = st.radio("Seleziona la risposta:", ['1', '2', '3'],
                             format_func=lambda x: q['risposte'][int(x)-1], key=f"risposta_{st.session_state.current_question}")
 
