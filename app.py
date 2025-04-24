@@ -19,7 +19,25 @@ test_structure = {
     "NORMATIVA DIPORTISTICA E AMBIENTALE": 2
 }
 
-st.title("Simulatore Esame - Patente D")
+#st.title("Simulatore Esame - Patente D")
+
+import streamlit as st
+
+# Titolo con immagine cliccabile
+st.markdown(
+    """
+    <h1 style='text-align: center;'>
+        <a href="https://www.patentenautica.org" target="_blank">
+            <img src="https://patentenautica.org/wp-content/uploads/2025/04/ChatGPT-Image-24-apr-2025-10_20_53-1-300x300.png" 
+                alt="Patente Nautica" width="700">
+        </a>
+        <br>
+        Simulatore Esame - Patente D
+    </h1>
+    """, 
+    unsafe_allow_html=True
+)
+
 
 DURATA_ESAME = 30 * 60  # 30 minuti
 
