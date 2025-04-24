@@ -74,7 +74,7 @@ if st.session_state.started:
                 })
             st.session_state.current_question += 1
 
-elif tempo_rimasto <= 0 or st.session_state.current_question >= len(st.session_state.questions):
+    elif tempo_rimasto <= 0 or st.session_state.current_question >= len(st.session_state.questions):
         st.warning("⏰ Esame terminato!")
 
         # 🎯 Valutazione finale con emoji
