@@ -74,8 +74,8 @@ if st.session_state.started:
         st.sidebar.markdown(
             f"""
             <div style='text-align: center; color: #e53935;'>
-            <span style='font-size: 18px;'>⏳ Tempo rimanente</span><br>
-            <span style='font-size: 12px;'>si aggiorna all'arrivo di una nuova domanda</span><br>
+            <span style='font-size: 22px;'>⏳ Tempo rimanente</span><br>
+            <span style='font-size: 14px;'>si aggiorna all'arrivo di una nuova domanda</span><br>
             <span style='font-size: 32px; font-weight: bold;'>{minuti:02d}:{secondi:02d}</span>
             </div>
             <br>
