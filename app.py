@@ -84,7 +84,7 @@ if st.session_state.started:
                     <img src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" alt="Donazione PayPal" style="cursor: pointer;">
                     <br>
                     <br>
-                    <span style='font-size: 14px;'>Supporta il nostro simulatore per la Patente Nautica D con una donazione: mantieni gratuito l'accesso alle risorse e migliora l'esperienza utente.</span><br>
+                    <span style='font-size: 16px;'>Sostieni il simulatore per la Patente Nautica D, mantenendolo gratuito e sempre aggiornato per tutti.</span><br>
                 </a>
             </div>
             """, 
