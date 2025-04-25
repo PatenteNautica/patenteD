@@ -43,7 +43,6 @@ st.markdown(
             <input type="image" style="cursor: pointer;" src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online.">
             <img loading="lazy" decoding="async" alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </div>
-    </form>
         <br>
         Simulatore Esame - Patente D
     </h1>
