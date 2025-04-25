@@ -81,6 +81,7 @@ if st.session_state.started:
             <div style="text-align: center;">
                 <a href="https://patentenautica.org/donazione/" target="_blank">
                     <img src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" alt="Donazione PayPal" style="cursor: pointer;">
+                    <br>
                     <span style='font-size: 12px;'>Supporta il nostro simulatore per la Patente Nautica D1 con una donazione: mantieni gratuito l'accesso alle risorse e migliora l'esperienza utente.</span><br>
                 </a>
             </div>
