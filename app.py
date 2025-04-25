@@ -78,6 +78,11 @@ if st.session_state.started:
             <span style='font-size: 12px;'>si aggiorna all'arrivo di una nuova domanda</span><br>
             <span style='font-size: 32px; font-weight: bold;'>{minuti:02d}:{secondi:02d}</span>
             </div>
+            <div style="text-align: center;">
+                <a href="https://patentenautica.org/donazione/" target="_blank">
+                    <img src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donate_SM.gif" alt="Donazione PayPal" style="cursor: pointer;">
+                </a>
+            </div>
             """, 
             unsafe_allow_html=True
         )
