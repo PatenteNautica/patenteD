@@ -32,10 +32,7 @@ st.markdown(
                  alt="Patente Nautica" width="70" style="vertical-align: middle;">
             <span style="font-size: 24px; color: #002e60; vertical-align: middle; margin-left: 10px;">PatenteNautica.org</span>
         </a>
-        <br>
-        Simulatore Esame - Patente D
-    </h1>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <div class="paypal-donations">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="bn" value="TipsandTricks_SP">
@@ -47,6 +44,9 @@ st.markdown(
             <img loading="lazy" decoding="async" alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </div>
     </form>
+        <br>
+        Simulatore Esame - Patente D
+    </h1>
     """, 
     unsafe_allow_html=True
 )
