@@ -80,7 +80,7 @@ if st.session_state.started:
             </div>
             <div style="text-align: center;">
                 <a href="https://patentenautica.org/donazione/" target="_blank">
-                    <img src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donate_SM.gif" alt="Donazione PayPal" style="cursor: pointer;">
+                    <img src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" alt="Donazione PayPal" style="cursor: pointer;">
                 </a>
             </div>
             """, 
