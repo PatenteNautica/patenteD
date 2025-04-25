@@ -39,7 +39,24 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
+# PayPal Donation Button (inserted within the Streamlit app)
+st.markdown(
+    """
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <div class="paypal-donations">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="bn" value="TipsandTricks_SP">
+            <input type="hidden" name="business" value="email.luca.martinelli@gmail.com">
+            <input type="hidden" name="amount" value="1">
+            <input type="hidden" name="rm" value="0">
+            <input type="hidden" name="currency_code" value="EUR">
+            <input type="image" style="cursor: pointer;" src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online.">
+            <img loading="lazy" decoding="async" alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </div>
+    </form>
+    """, 
+    unsafe_allow_html=True
+)
 
 DURATA_ESAME = 30 * 60  # 30 minuti
 
@@ -142,19 +159,3 @@ if st.session_state.started:
 
 import streamlit.components.v1 as components
 
-<!-- Begin PayPal Donations by https://www.tipsandtricks-hq.com/paypal-donations-widgets-plugin -->
-
-</p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    <div class="paypal-donations">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="bn" value="TipsandTricks_SP">
-        <input type="hidden" name="business" value="email.luca.martinelli@gmail.com">
-        <input type="hidden" name="amount" value="1">
-        <input type="hidden" name="rm" value="0">
-        <input type="hidden" name="currency_code" value="EUR">
-        <input type="image" style="cursor: pointer;" src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online.">
-        <img loading="lazy" decoding="async" alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </div>
-</form>
-<!-- End PayPal Donations -->
