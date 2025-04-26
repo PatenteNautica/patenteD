@@ -130,12 +130,12 @@ if st.session_state.started:
         st.subheader(f"Hai risposto correttamente a {punteggio} domande su {totale}.")
 
         # Emoji e messaggio finale
-        if punteggio >= 13:
-            st.success("🎉 Complimenti, ottimo risultato!")
+        if punteggio >= 12:
+            st.success("🎉 Complimenti, ottimo risultato! Hai superato la prova!")
         elif punteggio >= 10:
-            st.info("💪 Buon lavoro, ma puoi migliorare ancora.")
+            st.info("💪 Buon lavoro, ma puoi migliorare ancora. Non hai superato la prova...")
         else:
-            st.warning("📘 Allenati ancora un po', riprova!")
+            st.warning("📘 Allenati ancora un po', riprova! Non hai superato la prova...")
 
         if st.session_state.incorrect:
             st.write("### Domande sbagliate:")
